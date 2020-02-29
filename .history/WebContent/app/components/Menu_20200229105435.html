@@ -23,15 +23,14 @@
 	        	bootbox.prompt("Enter the name of this Task:", function(result){
 	        		console.log(result);
 					// Add code here to submit the task to the backend
-					//access blocked by CORS policy -Anna
 					$.ajax({
-        		type: "POST",
-        		url: "https://mywheeler.net/test/Taskmanager/app/controllers/saveTask.jsp",
-       			 contentType: "application/json; charset=utf-8",
-       			 dataType: "json",
+        			type: "POST",
+      				  url: "https://mywheeler.net/test/Taskmanager/app/controllers/saveTask.jsp",
+					contentType: "application/json; charset=utf-8",
+					 dataType: "json"
     });
-				});
-				
+	        	});
+
 	        	// fixes issue with bootbox overlay causing text boxes to be covered
 	        	window.setTimeout(function(){
 	        		$(".bootbox").removeAttr("tabIndex");
