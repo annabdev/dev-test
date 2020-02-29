@@ -24,10 +24,13 @@
 	        		console.log(result);
 					// Add code here to submit the task to the backend
 					$.ajax({
-        			type: "POST",
-      				  url: "https://mywheeler.net/test/Taskmanager/app/controllers/saveTask.jsp",
-					contentType: "application/json; charset=utf-8",
-					 dataType: "json"
+        type: "POST",
+        url: "https://mywheeler.net/test/Taskmanager/app/controllers/saveTask.jsp",
+        //data: jsonData, if you need to post some data to the controller.
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: OnSuccess,
+        error: OnErrorCall
     });
 	        	});
 
