@@ -12,15 +12,12 @@
 	</style>
 	<template>
 		<li>{{task.name}}
-		</br>
-			
+			<input type=checkbox>update</input>
+		<input type=checkbox>delete</input>
 	</li>
-	<button onClick=updateTask()>Update</button>
-		<button onClick=deleteTask()>Delete</button>
 	</template>
 
     <script>
-		//not entirely sure why I can't connect these functions to my onClick action
 	    Polymer({
 			is: 'dev-task',
 			updateTask:function(){

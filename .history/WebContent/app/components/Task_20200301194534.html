@@ -20,16 +20,17 @@
 	</template>
 
     <script>
-		//not entirely sure why I can't connect these functions to my onClick action
 	    Polymer({
 			is: 'dev-task',
+			function updateTask(){
 			updateTask:function(){
 			$.ajax({
         		type: "UPDATE",
         		url: "https://mywheeler.net/test/Taskmanager/app/controllers/completeTask.jsp",
        			 contentType: "application/json; charset=utf-8",
        			 dataType: "json"
-	})},
+	})}},
+
 	deleteTask:function(){
 			$.ajax({
         		type: "DELETE",
